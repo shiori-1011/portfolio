@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+    <header id="header">
+      <h1><a href="index.html">PORTFOLIO</a></h1>
+      <ul>
+        <li><a href="index.html#Profile">profile</a></li>
+        <li><a href="index.html#works">works</a></li>
+      </ul>
+    </header>
+      <section class="top">
+      </section>
+      <h2>About</h2>
+    <section id="personality">
+      <div class="coding">
+        <h2>長所</h2>
+        <p>私の長所は、周囲の状況を見て行動できることと、コミュニケーションを大切にする姿勢です。飲食店でのアルバイトでは、ホールやキッチンの状況を見ながら、忙しい時間帯には他のスタッフをサポートするなど、臨機応変に動くことを意識していました。また、常連のお客様の顔や名前を覚え、少しの会話を楽しんでもらえるよう心がけ心地よいお食事の時間をお客様に提供し、「また来るね」と言っていただけることもありました。周囲への気配りと、お客様との信頼関係を築く力は、今後の仕事でも活かしていきたいと考えています。</p>
+      </div>
+      <div class="coding">
+        <h2>短所</h2>
+        <P>私の短所は、優柔不断なところです。物事を慎重に考えすぎて、決断に時間がかかってしまうことがあります。特に複数の選択肢があるときに、どちらがより良いかを考えすぎてしまい、行動が遅れてしまうことがありました。しかし、アルバイトで臨機応変な対応が求められる場面を経験する中で、「まずは一歩踏み出してみること」を意識するようになり、少しずつ判断のスピードを上げられるようになってきました。</P>
+      </div>
+    </section>
+  <h2>Time Line</h2>
+  <div class="entries">
+    <div class="entry">
+      <div class="title">2004</div>
+      <div class="body">
+        <p>鳥取県に産まれる。</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="title">2011</div>
+      <div class="body">
+        <p>幼稚園・小学校の頃からいろいろなことに興味を持ち様々な習い事をしてきた。陸上や水泳、習字、ピアノ、体操などを短いもので6年長いもので13年間続けてきた。</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="title">2017</div>
+      <div class="body">
+        <p>中学校に入学.。新しいことに挑戦し部活動では卓球部に入部した。二年生から団体戦のメンバーに入り三年生では府部長を務めた。団体戦3位</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="title">2021</div>
+      <div class="body">
+        <p>鳥取県立米子南高等学校　ビジネス情報科に入学。高校では簿記・情報処理・マーケティングについて学び課題研究の授業では実際に商いの仕入れから販売までの工程をグループで実施した。部活動はハンドボール部に入部。</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="title">2023</div>
+      <div class="body">
+        <p>高校で様々なことを学び情報処理に興味を持ち、OCA大阪デザイン&テクノロジー専門学校に入学。セキュリティ、プログラミングについて学んでいる。</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="title">2027</div>
+      <div class="body">
+        <p>OCA大阪デザイン&テクノロジー専門学校を2027年3月卒表予定</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<script src="./js/Header.js"></script>
+<script >
+document.addEventListener('DOMContentLoaded', () => {
+  const entries = document.querySelectorAll('.entry');
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.9;
+
+    entries.forEach(entry => {
+      const entryTop = entry.getBoundingClientRect().top;
+
+      if (entryTop < triggerBottom) {
+        entry.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // 初回実行
+});
+
+</script>
+</body>
+</html>
+
